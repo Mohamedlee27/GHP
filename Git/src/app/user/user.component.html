@@ -1,8 +1,14 @@
-<div *ngif="user">
-<h1>
-    {{user.login}}
-</h1>
-<p>
-    date joined:{{user.created_at|date}}
-</p>
+<h1>Welcome</h1>
+<div class="container">
+<img src="{{user.avatar_url}}" alt="">
+
+    <ul>
+        <li>{{user.login}}</li>
+    </ul>
+</div>
+<div class="container" *ngFor="let repo of repo">
+<ul>
+    <li> <a href="{{repo.html_url}}">{{repo.name}}</a></li>
+    <li>{{repo.description}}</li>
+</ul>
 </div>

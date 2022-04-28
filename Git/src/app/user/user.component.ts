@@ -21,7 +21,7 @@ repo!:any;
 
     this.ServiceService.fetchRepo(this.userLabel).subscribe((repo)=>{
       this.repo = repo
-      console.log (repo);
+      // console.log (repo);
     })
 
     this.ServiceService.serveUser(this.userLabel).then((user)=>(this.user=user))
@@ -31,12 +31,18 @@ repo!:any;
 ferryRepo(userLabel:string):void{
   this.ServiceService.fetchRepo(userLabel).subscribe((repo)=>{
     this.repo = repo
+    console.log (repo)
   })
 
 }
 
 ferryUser(userLabel:string):void{
- this.ServiceService.serveUser(userLabel).then((user)=>(this.user=user))
+ this.ServiceService.serveUser(userLabel).then((user)=>{
+   this.user=user
+  console.log(user)
+  
+  })
+ 
  
 
 }
@@ -44,6 +50,8 @@ ferryUser(userLabel:string):void{
 
 
   ngOnInit(): void {
+    this.ferryRepo(this.userLabel)
+    this.ferryUser(this.userLabel)
   }
 
 }
