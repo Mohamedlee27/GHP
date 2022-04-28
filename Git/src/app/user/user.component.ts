@@ -16,6 +16,9 @@ repo!:any;
   callInfo(newPerson:any):void{
     this.userLabel = newPerson
 
+    this.ferryRepo=(newPerson)
+    this.ferryUser=(newPerson)
+
     this.ServiceService.fetchRepo(this.userLabel).subscribe((repo)=>{
       this.repo = repo
       console.log (repo);
@@ -24,6 +27,21 @@ repo!:any;
     this.ServiceService.serveUser(this.userLabel).then((user)=>(this.user=user))
 
   } 
+
+ferryRepo(userLabel:string):void{
+  this.ServiceService.fetchRepo(userLabel).subscribe((repo)=>{
+    this.repo = repo
+  })
+
+}
+
+ferryUser(userLabel:string):void{
+ this.ServiceService.serveUser(userLabel).then((user)=>(this.user=user))
+ 
+
+}
+
+
 
   ngOnInit(): void {
   }
