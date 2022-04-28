@@ -1,1 +1,8 @@
-<p>user works!</p>
+<div *ngif="user">
+<h1>
+    {{user.login}}
+</h1>
+<p>
+    date joined:{{user.created_at|date}}
+</p>
+</div>

@@ -12,7 +12,7 @@ gitLink = 'https://api.github.com'
 
 async serveUser(userLabel:string){
   const moha = this.http.get<any>(`${this.gitLink}/users/${userLabel}`)
-  return await lastValueFrom (moha).then((Response)=>Response)
+  return await lastValueFrom (moha).then((response)=>response)
 }
 
 fetchRepo(userLabel:string):Observable<any>{
