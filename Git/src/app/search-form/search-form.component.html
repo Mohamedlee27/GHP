@@ -1,1 +1,7 @@
-<p>search-form works!</p>
+<div class="container">
+    <form (ngSubmit)="sub(userLabel)">
+        <input type="search" [(ngModel)]="userLabel">
+
+        <button>search</button>
+    </form>
+</div>
