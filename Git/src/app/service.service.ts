@@ -19,5 +19,5 @@ fetchRepo(userLabel:string):Observable<any>{
   return this.http.get<any>(`${this.gitLink}/users/${userLabel}/repos`)
 }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
