@@ -1,5 +1,8 @@
 <h1>Welcome</h1>
-<div class="container">
+
+<app-search-form (newPerson)="callInfo($event)"></app-search-form>
+
+<div class="container" *ngIf="user">
 <img src="{{user.avatar_url}}" alt="">
 
     <ul>
