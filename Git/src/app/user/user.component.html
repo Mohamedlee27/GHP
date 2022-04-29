@@ -2,12 +2,23 @@
 
 <app-search-form (newPerson)="callInfo($event)"></app-search-form>
 
-<div class="container" *ngIf="user">
-<img src="{{user.avatar_url}}" alt="">
+<div class="container mt-5" *ngIf="user">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>{{user.login}}</h1>
+            <p>date joined:{{user.created_at|date}}</p>
+            <p>last updated:{{user.updated_at|date}}</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{user.avatar_url}}" alt="">
+        </div>
+        
 
-    <ul>
-        <li>{{user.login}}</li>
-    </ul>
+    
+       
+    
+    </div>
+
 </div>
 
 <h1>repositories</h1>
