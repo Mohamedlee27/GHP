@@ -4,7 +4,7 @@
 
 <div class="container mt-5" *ngIf="user">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 text-light">
             <h4>{{user.login}}</h4>
             <p>Date joined:{{user.created_at|date}}</p>
             <p>Last updated:{{user.updated_at|date}}</p>
@@ -27,6 +27,6 @@
     
 
 <a href="{{repo.html_url}}">{{repo.name}}</a>
-   <p>{{repo.description}}</p>
-<p>created on:{{repo.created_at|date}}</p>
+   <p class="text-light">{{repo.description}}</p>
+<p class="text-light">created on:{{repo.created_at|date}}</p>
 </div>
