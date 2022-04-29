@@ -1,4 +1,4 @@
-<h1>Welcome</h1>
+
 
 <app-search-form (newPerson)="callInfo($event)"></app-search-form>
 
@@ -6,8 +6,9 @@
     <div class="row">
         <div class="col-md-6">
             <h1>{{user.login}}</h1>
-            <p>date joined:{{user.created_at|date}}</p>
-            <p>last updated:{{user.updated_at|date}}</p>
+            <p>Date joined:{{user.created_at|date}}</p>
+            <p>Last updated:{{user.updated_at|date}}</p>
+            <p>Number of Repositories:{{user.public_repos}}</p>
         </div>
         <div class="col-md-6">
             <img src="{{user.avatar_url}}" alt="">
@@ -20,8 +21,8 @@
     </div>
 
 </div>
-
-<h1>repositories</h1>
+<hr>
+<h1 class="text-center mt-5">Repositories</h1>
 <div class="container text-center" *ngFor="let repo of repo">
     
 
