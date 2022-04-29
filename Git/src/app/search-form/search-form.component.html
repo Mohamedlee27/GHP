@@ -1,7 +1,15 @@
 <div class="container">
-    <form (ngSubmit)="sub(userLabel)">
-        <input type="search" name="userLabel" [(ngModel)]="userLabel">
-
-        <a href=""><button type="submit">search</button></a>
-    </form>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Welcome to Github</h2>
+        </div>
+        <div class="col-md-6">
+            <form (ngSubmit)="sub(userLabel)">
+                <input type="search" placeholder="Search User Here" name="userLabel" [(ngModel)]="userLabel">
+        
+                <a href=""><button type="submit">search</button></a>
+            </form>
+        </div>
+    </div>
+    
 </div>
