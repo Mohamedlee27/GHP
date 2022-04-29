@@ -9,9 +9,12 @@
         <li>{{user.login}}</li>
     </ul>
 </div>
-<div class="container" *ngFor="let repo of repo">
-<ul>
-    <li> <a href="{{repo.html_url}}">{{repo.name}}</a></li>
-    <li>{{repo.description}}</li>
-</ul>
+
+<h1>repositories</h1>
+<div class="container text-center" *ngFor="let repo of repo">
+    
+
+<a href="{{repo.html_url}}">{{repo.name}}</a>
+   <p>{{repo.description}}</p>
+<p>created on:{{repo.created_at|date}}</p>
 </div>
